@@ -48,12 +48,15 @@ La siguiente tabla proviene del modelo final entrenado sobre los **838 055 clien
 
 1. Clona el repositorio.
 2. Crea un entorno virtual e instala dependencias: `pip install -r requirements.txt`
-3. Descarga el dataset completo si quieres reproducir el análisis completo (ver `data/README.md`).
-4. Abre `notebooks/01_limpieza.ipynb` y ejecuta las celdas en orden.
+3. Descarga el archivo completo `bank_transactions.csv` según `data/README.md`.
+4. Abre `notebooks/01_segmentacion_completa.ipynb` y ejecuta todas las celdas en orden (**Run All**). Al final se genera `data/clientes_segmentados.csv`.
+
+Para explorar solo la muestra incluida, abre `notebooks/00_exploracion_muestra.ipynb`; no requiere descargar el dataset completo.
 
 ## Estructura
 
 - `data/`: muestra de datos y documentación del dataset.
-- `notebooks/01_limpieza.ipynb`: limpieza, agregación por cliente y segmentación.
+- `notebooks/00_exploracion_muestra.ipynb`: exploración y limpieza inicial sobre la muestra de 5 000 filas.
+- `notebooks/01_segmentacion_completa.ipynb`: análisis completo sobre el dataset total (limpieza, agregación por cliente, codo, silueta y K-Means final).
 - `muestra.py`: script que generó la muestra.
 - `requirements.txt`: dependencias con versiones fijas.
